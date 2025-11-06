@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Spring Boot Social Media API</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="spring-boot-social-media-api">Spring Boot Social Media API</h1>
+<blockquote>
+<p>A comprehensive, feature-rich REST API for a modern social media platform, built with Spring Boot, Spring Security, and MySQL. This portfolio-ready project implements a secure, scalable backend with full JWT authentication.</p>
+</blockquote>
+<hr>
+<h2 id="-core-features">🚀 Core Features</h2>
+<ul>
+<li><strong>🔐 Secure Auth:</strong> Full JWT (Login/Register) &amp; Endpoint Protection.</li>
+<li><strong>👥 User Management:</strong> Follow/Unfollow, Search, Edit Profile.</li>
+<li><strong>📰 Posts:</strong> Full CRUD for text and image posts.</li>
+<li><strong>❤️ Interactions:</strong> Like/Unlike Posts &amp; Comments.</li>
+<li><strong>🎬 Reels:</strong> Short video sharing (similar to TikTok/IG Reels).</li>
+<li><strong>📸 Stories:</strong> Ephemeral 24-hour stories with auto-deletion (<code>@Scheduled</code>).</li>
+<li><strong>💬 Real-time Chat:</strong> 1-on-1 and Group Chat creation.</li>
+<li><strong>✉️ Messaging:</strong> Sending text and image messages.</li>
+<li><strong>... and more!</strong></li>
+</ul>
+<hr>
+<h2 id="️-tech-stack">🛠️ Tech Stack</h2>
+<ul>
+<li><strong>Language:</strong> Java 25</li>
+<li><strong>Framework:</strong> Spring Boot 3</li>
+<li><strong>Security:</strong> Spring Security 6</li>
+<li><strong>Data:</strong> Spring Data JPA (Hibernate)</li>
+<li><strong>Database:</strong> MySQL</li>
+<li><strong>Authentication:</strong> JWT (JSON Web Tokens)</li>
+<li><strong>API:</strong> RESTful API</li>
+</ul>
+<hr>
+<h2 id="api-endpoints">API Endpoints</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Method</th>
+<th style="text-align:left">Endpoint</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>POST</code></td>
+<td style="text-align:left"><code>/auth/signup</code></td>
+<td style="text-align:left">Register a new user</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>POST</code></td>
+<td style="text-align:left"><code>/auth/login</code></td>
+<td style="text-align:left">Login user (returns JWT)</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>GET</code></td>
+<td style="text-align:left"><code>/api/posts/</code></td>
+<td style="text-align:left">Get (Paginated) Post Feed</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>POST</code></td>
+<td style="text-align:left"><code>/api/posts/</code></td>
+<td style="text-align:left">Create a new post</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>GET</code></td>
+<td style="text-align:left"><code>/api/reels/</code></td>
+<td style="text-align:left">Get (Paginated) Reel Feed</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>POST</code></td>
+<td style="text-align:left"><code>/api/reels/</code></td>
+<td style="text-align:left">Upload a new Reel</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>GET</code></td>
+<td style="text-align:left"><code>/api/stories/feed</code></td>
+<td style="text-align:left">Get story feed (mutuals)</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>POST</code></td>
+<td style="text-align:left"><code>/api/stories/</code></td>
+<td style="text-align:left">Upload a new Story</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>POST</code></td>
+<td style="text-align:left"><code>/api/chats/</code></td>
+<td style="text-align:left">Create a new Chat (1-on-1 or Group)</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>POST</code></td>
+<td style="text-align:left"><code>/api/messages/{chatId}</code></td>
+<td style="text-align:left">Send a message</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>DELETE</code></td>
+<td style="text-align:left"><code>/api/messages/{msgId}</code></td>
+<td style="text-align:left">Delete a message</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>...</code></td>
+<td style="text-align:left"><code>...</code></td>
+<td style="text-align:left"><code>...</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="️-how-to-run">⚙️ How to Run</h2>
+<ol>
+<li><strong>Clone the repository:</strong><pre><code class="language-bash">git <span class="hljs-built_in">clone</span> [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+<span class="hljs-built_in">cd</span> your-repo-name
+</code></pre>
+</li>
+<li><strong>Create your database:</strong>
+<ul>
+<li>Create a MySQL database named <code>socialapp</code>.</li>
+</ul>
+</li>
+<li><strong>Setup local environment:</strong>
+<ul>
+<li>Create an <code>application-local.properties</code> file in <code>src/main/resources/</code>.</li>
+<li>Add your database password and JWT secret key:</li>
+</ul>
+<pre><code class="language-properties"><span class="hljs-attr">spring.datasource.password</span>=<span class="hljs-string">your_db_password</span>
+<span class="hljs-attr">app.jwt.secret-key</span>=<span class="hljs-string">your_very_long_and_secret_jwt_key</span>
+</code></pre>
+</li>
+<li><strong>Run the application:</strong><pre><code class="language-bash">mvn spring-boot:run
+</code></pre>
+</li>
+<li>The application will be available at <code>http://localhost:8081</code>.</li>
+</ol>
+
+            
+            
+        </body>
+        </html>
